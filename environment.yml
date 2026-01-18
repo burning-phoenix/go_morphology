@@ -1,0 +1,54 @@
+# Morphogenetic Spaces Project - Conda Environment
+#
+# Create environment:
+#   conda env create -f environment.yml
+#
+# Activate:
+#   conda activate morpho
+#
+# Update existing:
+#   conda env update -f environment.yml --prune
+
+name: morpho
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+
+dependencies:
+  # Python version
+  - python>=3.10
+
+  # Conda packages (use pthreads openblas to avoid OpenMP conflict with PyTorch)
+  - libopenblas=*=*pthreads*
+  - numpy>=1.24
+  - scipy>=1.10
+  - h5py>=3.8
+  - hdbscan>=0.8.30
+  - scikit-learn>=1.2
+  - matplotlib>=3.7
+  - jupyter
+  - jupyterlab>=4.0
+  - pytest>=7.0
+
+  # Pip packages
+  - pip
+  - pip:
+      # PyTorch ecosystem (pip for Apple Silicon MPS support)
+      - torch>=2.0.0
+      - pytorch-lightning>=2.0.0
+      - torchmetrics>=1.0.0
+
+      # SGF parsing
+      - sgfmill>=1.1.0
+
+      # Dimensionality reduction
+      - umap-learn>=0.5.0
+
+      # Utilities
+      - tqdm>=4.65.0
+      - hydra-core>=1.3.0
+
+      # TDA (uncomment when needed for notebooks 07+)
+      # - ripser>=0.6.0
+      # - persim>=0.3.0

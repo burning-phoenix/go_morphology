@@ -1,0 +1,64 @@
+# Morphogenetic Spaces Project - Requirements
+# Environment: conda (recommended for Apple Silicon compatibility)
+#
+# IMPORTANT: On macOS with Apple Silicon, use pthreads build of openblas
+# to avoid OpenMP conflicts with PyTorch:
+#   conda install "libopenblas=*=*pthreads*"
+
+# =============================================================================
+# Core Deep Learning
+# =============================================================================
+torch>=2.0.0
+pytorch-lightning>=2.0.0
+torchmetrics>=1.0.0
+
+# =============================================================================
+# Scientific Computing
+# =============================================================================
+numpy>=1.24.0
+scipy>=1.10.0
+scikit-learn>=1.2.0
+psutil>=5.9.0  # System capability detection for memory-efficient loading
+
+# =============================================================================
+# Data Loading & Storage
+# =============================================================================
+h5py>=3.8.0
+sgfmill>=1.1.0
+
+# =============================================================================
+# Visualization
+# =============================================================================
+matplotlib>=3.7.0
+tqdm>=4.65.0
+
+# =============================================================================
+# Clustering & Dimensionality Reduction
+# =============================================================================
+hdbscan>=0.8.30
+umap-learn>=0.5.0
+
+# =============================================================================
+# Markov State Models & Dynamical Analysis
+# =============================================================================
+deeptime>=0.4.0         # PCCA+, TPT, MSM estimation
+pydiffmap>=0.2.0        # Diffusion maps with Nyström support
+networkx>=2.8           # Pathway decomposition (max-flow)
+
+# =============================================================================
+# Topological Data Analysis (install when needed for notebooks 07+)
+# =============================================================================
+# ripser>=0.6.0
+# persim>=0.3.0
+
+# =============================================================================
+# Development & Testing
+# =============================================================================
+pytest>=7.0.0
+jupyter>=1.0.0
+jupyterlab>=4.0.0
+
+# =============================================================================
+# Optional: Hydra for config management
+# =============================================================================
+hydra-core>=1.3.0
