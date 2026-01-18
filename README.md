@@ -90,7 +90,3 @@ The project is structured as a series of numbered notebooks that should be execu
 ## Contributing
 
 Contributions are welcome! If you find a bug or have an idea for a new analysis method, please open an issue or submit a pull request. I am still looking into a better modelling strategy to better understand the shape of the game strategy space, and I am conlficted between using a discrete vs a continuous approach, but will probably go with a hybrid approach.
-
-## 📄 License
-
-[License Name, e.g., MIT License]
